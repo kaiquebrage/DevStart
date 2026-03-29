@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DevStart</title>
+  <meta name="description" content="Plataforma DevStart para aprender Front-End e conquistar sua primeira vaga em tecnologia.">
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -14,22 +15,24 @@
   <h1>DevStart 🚀</h1>
 
   <nav>
-    <a href="#">Início</a>
-    <a href="#">Benefícios</a>
-    <a href="#">Contato</a>
+    <a href=" ">Início</a>
+    <a href="beneficios.html">Benefícios</a>
+    <a href="contatos.html">Contato</a>
   </nav>
 </header>
 
 <main>
 
   <section class="hero container">
-    <h2>Aprenda Front-End e conquiste sua primeira vaga</h2>
-    <p>Domine HTML, CSS e JavaScript com projetos reais e foco no mercado.</p>
+    <h2>Saia do zero e conquiste sua primeira vaga como Desenvolvedor Front-End 🚀</h2>
+    <p>Aprenda com projetos reais, pratique como no mercado
+       e desenvolva as habilidades que empresas realmente procuram.</p>
 
-    <button onclick="scrollToForm()">Começar agora</button>
+    <button class="btn">Começar agora</button>
   </section>
 
   <section class="benefits container">
+
     <div class="card">
       <h3>💻 Projetos Reais</h3>
       <p>Aprenda construindo aplicações práticas.</p>
@@ -49,36 +52,39 @@
   <section class="courses container">
 
     <h2 class="section-title">
-      <span>Nossos Cursos</span>
+      Escolha seu<span> próximo passo</span>
     </h2>
 
     <div class="courses-grid">
 
       <div class="course-card">
-        <h3>Front-End do Zero 🚀</h3>
+        <h3>🚀 Front-End do Zero</h3>
         <p>Aprenda HTML, CSS e JavaScript.</p>
-        <p class="price">R$ 97</p>
-        <button class="buy-btn" data-curso="Front-End">Comprar</button>
+        <p class="price">R$ 98,00</p>
+        <button class=" btn buy-btn" data-curso="Front-End">Comprar</button>
       </div>
 
       <div class="course-card">
-        <h3>JavaScript na Prática ⚡</h3>
-        <p>Domine lógica e interatividade.</p>
-        <p class="price">R$ 127</p>
-        <button class="buy-btn" data-curso="JavaScript">Comprar</button>
+        <h3> ⚡JavaScript na Prática </h3>
+        <p>Para quem quer sair do básico e criar aplicações interativas.</p>
+        <p class="price">R$ 127,00</p>
+        <button class="btn buy-btn" data-curso="JavaScript">Comprar</button>
+      </div>
+
+       <div class="course-card">
+        <h3> 💻AI Java Back-End </h3>
+        <p>Use a inteligência artifical a seu favor.</p>
+        <p class="price">R$ 135,00 </p>
+        <button class="btn buy-btn" data-curso="Back-End">Comprar</button>
       </div>
 
     </div>
 
   </section>
 
-  <section class="cta container">
-    <h2>Pronto para mudar sua carreira?</h2>
-    <button onclick="scrollToForm()">Quero começar agora</button>
-  </section>
-
   <section class="form-section container" id="formSection">
-    <h2>Comece agora</h2>
+    <h2>Dê o primeiro passo na sua carreira</h2>
+    <p>Preencha seus dados e comece agora sua jornada na tecnologia.</p>
 
     <form id="form">
 
@@ -88,7 +94,7 @@
       <label for="email">Email</label>
       <input type="email" id="email" placeholder="Seu email">
 
-      <button type="submit">Quero começar</button>
+      <button class="btn" type="submit">Quero começar</button>
 
     </form>
 
@@ -96,18 +102,41 @@
   </section>
 
   <section class="testimonials container">
-    <h2>O que nossos alunos dizem</h2>
+  <h2 class="section-title">
+    Resultados reais de alunos reais
+  </h2>
 
-    <div class="testimonial">
-      <p>"Consegui minha primeira vaga em 2 meses!"</p>
-      <strong>- João</strong>
+  <div class="testimonials-grid">
+
+    <div class="testimonial-card">
+      <p>"Consegui minha primeira vaga em 2 meses. O método é direto e prático."</p>
+      <div class="stars">★★★★★</div>
+      <div class="user">
+        <strong>João Silva</strong>
+        <span>Desenvolvedor Júnior</span>
+      </div>
     </div>
 
-    <div class="testimonial">
-      <p>"Didática incrível e prática."</p>
-      <strong>- Maria</strong>
+    <div class="testimonial-card destaque">
+      <p>"Nunca tinha programado antes. Hoje já faço freelas como front-end."</p>
+      <div class="stars">★★★★★</div>
+      <div class="user">
+        <strong>Maria Souza</strong>
+        <span>Front-End Freelancer</span>
+      </div>
     </div>
-  </section>
+
+    <div class="testimonial-card">
+      <p>"O diferencial é a prática. Você realmente aprende construindo."</p>
+      <div class="stars">★★★★★</div>
+      <div class="user">
+        <strong>Lucas Oliveira</strong>
+        <span>Estudante de TI</span>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 </main>
 
@@ -123,8 +152,8 @@
     <p id="modalFeedback"></p>
 
     <div class="modal-actions">
-      <button id="confirmBtn">Confirmar</button>
-      <button id="cancelBtn">Cancelar</button>
+      <button class="btn" id="confirmBtn">Confirmar</button>
+      <button class="btn" id="cancelBtn">Cancelar</button>
     </div>
 
   </div>
