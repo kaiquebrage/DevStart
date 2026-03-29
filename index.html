@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevStart</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="container header">
+  <h1>DevStart 🚀</h1>
+
+  <nav>
+    <a href="#">Início</a>
+    <a href="#">Benefícios</a>
+    <a href="#">Contato</a>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero container">
+    <h2>Aprenda Front-End e conquiste sua primeira vaga</h2>
+    <p>Domine HTML, CSS e JavaScript com projetos reais e foco no mercado.</p>
+
+    <button onclick="scrollToForm()">Começar agora</button>
+  </section>
+
+  <section class="benefits container">
+    <div class="card">
+      <h3>💻 Projetos Reais</h3>
+      <p>Aprenda construindo aplicações práticas.</p>
+    </div>
+
+    <div class="card">
+      <h3>🚀 Foco em Mercado</h3>
+      <p>Prepare-se para entrevistas e vagas reais.</p>
+    </div>
+
+    <div class="card">
+      <h3>📈 Evolução Rápida</h3>
+      <p>Conteúdo direto ao ponto.</p>
+    </div>
+  </section>
+
+  <section class="courses container">
+
+    <h2 class="section-title">
+      <span>Nossos Cursos</span>
+    </h2>
+
+    <div class="courses-grid">
+
+      <div class="course-card">
+        <h3>Front-End do Zero 🚀</h3>
+        <p>Aprenda HTML, CSS e JavaScript.</p>
+        <p class="price">R$ 97</p>
+        <button class="buy-btn" data-curso="Front-End">Comprar</button>
+      </div>
+
+      <div class="course-card">
+        <h3>JavaScript na Prática ⚡</h3>
+        <p>Domine lógica e interatividade.</p>
+        <p class="price">R$ 127</p>
+        <button class="buy-btn" data-curso="JavaScript">Comprar</button>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="cta container">
+    <h2>Pronto para mudar sua carreira?</h2>
+    <button onclick="scrollToForm()">Quero começar agora</button>
+  </section>
+
+  <section class="form-section container" id="formSection">
+    <h2>Comece agora</h2>
+
+    <form id="form">
+
+      <label for="nome">Nome</label>
+      <input type="text" id="nome" placeholder="Seu nome">
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Seu email">
+
+      <button type="submit">Quero começar</button>
+
+    </form>
+
+    <p id="feedback"></p>
+  </section>
+
+  <section class="testimonials container">
+    <h2>O que nossos alunos dizem</h2>
+
+    <div class="testimonial">
+      <p>"Consegui minha primeira vaga em 2 meses!"</p>
+      <strong>- João</strong>
+    </div>
+
+    <div class="testimonial">
+      <p>"Didática incrível e prática."</p>
+      <strong>- Maria</strong>
+    </div>
+  </section>
+
+</main>
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+
+    <span id="closeModal">&times;</span>
+
+    <h2>Confirmar compra</h2>
+    <p id="modalText"></p>
+
+    <!-- 🔥 NOVO -->
+    <p id="modalFeedback"></p>
+
+    <div class="modal-actions">
+      <button id="confirmBtn">Confirmar</button>
+      <button id="cancelBtn">Cancelar</button>
+    </div>
+
+  </div>
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>

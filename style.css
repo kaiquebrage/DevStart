@@ -1,0 +1,286 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: white;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  background: rgba(15, 23, 42, 0.6);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+nav a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: white;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background: #22c55e;
+  transition: 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  color: #94a3b8;
+  font-size: 1.1rem;
+}
+
+/* BOTÕES */
+button {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  border: none;
+  padding: 14px 30px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  margin-top: 20px;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(34,197,94,0.5);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* BENEFÍCIOS */
+.benefits {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+}
+
+/* CURSOS */
+.courses-grid {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.course-card {
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(10px);
+  padding: 25px;
+  margin: 15px;
+  border-radius: 15px;
+  max-width: 280px;
+  transition: all 0.3s;
+  border: 1px solid rgba(255,255,255,0.05);
+  animation: fadeUp 0.6s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.course-card h3 {
+  margin-bottom: 10px;
+}
+
+.course-card p {
+  color: #cbd5e1;
+}
+
+.price {
+  font-size: 1.5rem;
+  color: #22c55e;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* TÍTULOS */
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  font-weight: bold;
+  animation: fadeUp 0.8s ease;
+}
+
+.section-title span {
+  background: linear-gradient(135deg, #22c55e, #4ade80);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(34,197,94,0.5);
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  margin: 12px auto 0;
+  background: linear-gradient(90deg, #22c55e, #4ade80);
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(34,197,94,0.5);
+}
+
+/* FORM */
+.form-section {
+  text-align: center;
+  margin-top: 40px;
+}
+
+input {
+  padding: 12px;
+  margin: 8px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  outline: none;
+}
+
+input:focus {
+  border: 1px solid #22c55e;
+}
+
+#feedback {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* TESTIMONIALS */
+.testimonial {
+  background: #1e293b;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/* ANIMAÇÃO */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav a {
+    margin: 0 10px;
+  }
+
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+
+  .course-card,
+  .card {
+    width: 100%;
+    max-width: 90%;
+  }
+}
+
+/* MODAL */
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(5px);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #020617;
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  animation: fadeUp 0.4s ease;
+}
+
+.modal-content h2 {
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  color: #94a3b8;
+}
+
+.modal-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+#closeModal {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  cursor: pointer;
+  font-size: 20px;
+}
+#modalFeedback {
+  margin-top: 15px;
+  font-weight: bold;
+}
